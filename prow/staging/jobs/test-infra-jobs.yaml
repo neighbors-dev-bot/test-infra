@@ -12,7 +12,7 @@ periodics:
     spec:
       containers:
         - name: branchprotector
-          image: gcr.io/k8s-prow/branchprotector:v20210407-51f95c2d52
+          image: gcr.io/k8s-prow/branchprotector:v20210422-d12e80af3e
           command: [ "/app/prow/cmd/branchprotector/app.binary" ]
           args:
             - --config-path=prow/staging/config.yaml
@@ -37,7 +37,7 @@ periodics:
     spec:
       containers:
         - name: label-sync
-          image: gcr.io/k8s-prow/label_sync:v20210408-455417db0f
+          image: gcr.io/k8s-prow/label_sync:v20210422-d12e80af3e
           command:
             - /app/label_sync/app.binary
           args:
